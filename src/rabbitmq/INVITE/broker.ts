@@ -1,0 +1,34 @@
+import amqplib, { Channel, Connection, Message } from "amqplib/callback_api";
+import chalk from "chalk";
+import handle from "./handler";
+
+const queue = process.env.QUEUE_INVITE;
+const url = process.env.RABBIT_URL;
+
+const invitationBroker = {
+  run: () => {
+    amqplib.connect(url, (error, conn: Connection) => {
+      if (error) {
+        console.log(chalk.red(error));
+        throw error;
+      }
+      console.log(chalk.green("Connected to RabbitMQ..."));
+      conn.createChannel((error, channel: Channel) => {
+        if (error) {
+          console.log(chalk.red(error));
+          throw error;
+        }
+        channel.assertQueue(queue, { durable: true });
+        console.log(
+          chalk.gray("Listening to the " + chalk.blue(queue) + " queue")
+        );
+        channel.consume(queue, (msg: Message) => {
+          handle(msg);
+          channel.ack(msg);
+        });
+      });
+    });
+  },
+};
+
+export default invitationBroker;
