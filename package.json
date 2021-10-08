@@ -1,0 +1,38 @@
+{
+  "name": "emailmicroservice",
+  "version": "1.0.0",
+  "description": "A node based email microservice for Collapp project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "doppler run --command=\"npm run run\"",
+    "run": "ts-node-dev src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collapp-zpi/emailMicroservice.git"
+  },
+  "keywords": [
+    "microservice",
+    "cli",
+    "email"
+  ],
+  "author": "Collapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collapp-zpi/emailMicroservice/issues"
+  },
+  "homepage": "https://github.com/collapp-zpi/emailMicroservice#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.10.3",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
+}
