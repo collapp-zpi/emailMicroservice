@@ -1,6 +1,7 @@
 import chalk from "chalk";
 import server from "./server";
 import invitationBroker from "./rabbitmq/INVITE/broker";
+import resetBroker from "./rabbitmq/RESET/broker";
 
 server.listen(process.env.PORT, async () => {
   console.log(
@@ -13,3 +14,4 @@ server.listen(process.env.PORT, async () => {
 });
 
 invitationBroker.run();
+resetBroker.run();

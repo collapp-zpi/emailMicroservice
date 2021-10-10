@@ -3,10 +3,10 @@ import chalk from "chalk";
 import handle from "./handler";
 import isAFreindlyMessage from "../../secret";
 
-const queue = process.env.QUEUE_INVITE;
+const queue = process.env.QUEUE_RESET;
 const url = process.env.RABBIT_URL;
 
-const invitationBroker = {
+const resetBroker = {
   run: () => {
     amqplib.connect(url, (error, conn: Connection) => {
       if (error) {
@@ -34,4 +34,4 @@ const invitationBroker = {
   },
 };
 
-export default invitationBroker;
+export default resetBroker;
