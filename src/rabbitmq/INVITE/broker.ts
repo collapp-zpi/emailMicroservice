@@ -6,7 +6,7 @@ import isAFreindlyMessage from "../../secret";
 const queue = process.env.QUEUE_INVITE;
 const url = process.env.RABBIT_URL;
 
-const invitationBroker = {
+const inviteBroker = {
   run: () => {
     amqplib.connect(url, (error, conn: Connection) => {
       if (error) {
@@ -34,4 +34,4 @@ const invitationBroker = {
   },
 };
 
-export default invitationBroker;
+export default inviteBroker;

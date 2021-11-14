@@ -29,5 +29,14 @@ router.get("/login", (req, res) => {
   });
 });
 
+router.get("/invite", (req, res) => {
+  res.render("invite", {
+    layout: false,
+    from: "John Smith",
+    space: "Space name",
+    url: "https://translate.google.com/",
+  });
+});
+
 
 export default router;
