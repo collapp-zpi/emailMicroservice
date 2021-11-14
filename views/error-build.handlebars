@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!--><meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    /><!--<![endif]-->
+    <title></title>
+    <style>
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-gray-200 p-12 text-gray-600">
+    <div class="bg-gray-50 max-w-screen-sm mx-auto flex flex-col p-12 rounded-3xl shadow-xl text-center">
+      <img class="h-12 w-12 mx-auto opacity-25" src="{{baseUrl}}/logo.svg" alt="Collapp logo" />
+      <h3 class="text-2xl mt-4">Hey, <b>{{name}}</b>!</h3>
+      <h1 class="mt-2 text-3xl font-bold text-red-600">Something went wrong 😥</h1>
+      <p class="mt-12">An error occured while building your Collapp plugin - <b>{{plugin}}</b>.</p>
+      <p class="mt-2">Bad news - we can't publish it at this time. <b>Good news</b> - we are already looking into it.</p>
+      <p class="text-gray-400 italic mt-4"></p>
+      <a href="{{url}}" class="mt-8 px-6 py-3 bg-red-500 mx-auto rounded-xl font-bold text-white cursor-pointer hover:bg-red-600 shadow-xl transition-colors" target="_blank">See for yourself</a>
+    </div>
+  </body>
+
+</html>

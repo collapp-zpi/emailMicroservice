@@ -21,5 +21,14 @@ router.get("/success", (req, res) => {
   });
 });
 
+router.get("/error", (req, res) => {
+  res.render("error-build", {
+    layout: false,
+    name: "Karol Sitarz",
+    plugin: "Weather",
+    url: "https://translate.google.com/",
+  });
+});
+
 
 export default router;
