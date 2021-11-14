@@ -1,9 +1,26 @@
 import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import chalk from "chalk";
 
-const router = express.Router()
+const server = express();
+
+server.use(helmet());
+server.use(cors());
+server.use(express.static("./views/images"));
+
+const handlebars = require('express-handlebars');
+
+server.engine('handlebars', handlebars.engine());
+server.set('view engine', 'handlebars');
+server.set("views", "./views");
 
 
-router.get("/success", (req, res) => {
+server.get("/", (req, res) => {
+  res.send("OK");
+});
+
+server.get("/success", (req, res) => {
   res.render("success-build", {
     layout: false,
     name: "John Smith",
@@ -12,7 +29,7 @@ router.get("/success", (req, res) => {
   });
 });
 
-router.get("/error", (req, res) => {
+server.get("/error", (req, res) => {
   res.render("error-build", {
     layout: false,
     name: "John Smith",
@@ -21,7 +38,7 @@ router.get("/error", (req, res) => {
   });
 });
 
-router.get("/login", (req, res) => {
+server.get("/login", (req, res) => {
   res.render("login", {
     layout: false,
     email: "john.smith@example.com",
@@ -29,7 +46,7 @@ router.get("/login", (req, res) => {
   });
 });
 
-router.get("/invite", (req, res) => {
+server.get("/invite", (req, res) => {
   res.render("invite", {
     layout: false,
     from: "John Smith",
@@ -38,5 +55,12 @@ router.get("/invite", (req, res) => {
   });
 });
 
-
-export default router;
+server.listen(process.env.PORT, async () => {
+  console.log(
+    chalk.green(
+      `Server is running on port: ${chalk.greenBright.bold(
+        process.env.PORT
+      )} for handlebars debugging.`
+    )
+  );
+});
