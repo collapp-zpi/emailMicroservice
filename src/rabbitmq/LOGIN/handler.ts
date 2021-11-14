@@ -3,7 +3,7 @@ import sendEmail from "../../sendEmail";
 
 const handle = (message: Message) => {
   const obj = JSON.parse(message.content.toString());
-  sendEmail({ ...obj, template: "reset" });
+  sendEmail({ ...obj, template: "login" });
 };
 
 export default handle;
