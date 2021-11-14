@@ -34,6 +34,7 @@ server.get("/error", (req, res) => {
     layout: false,
     name: "John Smith",
     plugin: "Weather",
+    errors: 'Incorrect React version. Current ^15.4.0, expected ^17.0.0.',
     url: "https://translate.google.com/",
   });
 });
