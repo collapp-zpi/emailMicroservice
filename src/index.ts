@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import server from "./server";
-import invitationBroker from "./rabbitmq/INVITE/broker";
-import resetBroker from "./rabbitmq/RESET/broker";
+import inviteBroker from "./rabbitmq/INVITE/broker";
+import loginBroker from "./rabbitmq/LOGIN/broker";
 import successBuildBroker from "./rabbitmq/SUCCESS-BUILD/broker";
 import errorBuildBroker from "./rabbitmq/ERROR-BUILD/broker";
 
@@ -15,7 +15,7 @@ server.listen(process.env.PORT, async () => {
   );
 });
 
-invitationBroker.run();
-resetBroker.run();
+inviteBroker.run();
+loginBroker.run();
 successBuildBroker.run();
 errorBuildBroker.run();

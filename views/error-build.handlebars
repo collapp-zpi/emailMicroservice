@@ -21,8 +21,8 @@
   <![endif]-->
     <title>Login to Collapp</title>
     <style>
-      .hover-bg-green-600:hover {
-        background-color: #059669 !important;
+      .hover-bg-red-600:hover {
+        background-color: #dc2626 !important;
       }
     </style>
   </head>
@@ -34,13 +34,15 @@
         <div role="separator" style="box-sizing: border-box; line-height: 16px;">&zwnj;</div>
         <h3 style="box-sizing: border-box; margin: 0; font-size: 24px; font-weight: 400;">Hey, <b style="box-sizing: border-box;">{{name}}</b>!</h3>
         <div role="separator" style="box-sizing: border-box; line-height: 8px;">&zwnj;</div>
-        <h1 style="box-sizing: border-box; margin: 0; font-size: 36px; font-weight: 700; color: #10b981;">Great news! 🎉</h1>
+        <h1 style="box-sizing: border-box; margin: 0; font-size: 30px; font-weight: 700; color: #dc2626;">Something went wrong 😥</h1>
         <div role="separator" style="box-sizing: border-box; line-height: 48px;">&zwnj;</div>
-        <p style="box-sizing: border-box; margin: 0;">Your Collapp plugin - <b style="box-sizing: border-box;">{{plugin}}</b> has been successfully published and can be used by people all over the world!</p>
+        <p style="box-sizing: border-box; margin: 0;">An error occured while building your Collapp plugin - <b style="box-sizing: border-box;">{{plugin}}</b>.</p>
         <div role="separator" style="box-sizing: border-box; line-height: 16px;">&zwnj;</div>
-        <p style="box-sizing: border-box; margin: 0; font-style: italic; color: #9ca3af;">Exciting, isn't it?</p>
-        <div role="separator" style="box-sizing: border-box; line-height: 32px;">&zwnj;</div>
-        <a href="{{url}}" class="hover-bg-green-600" target="_blank" style="box-sizing: border-box; text-decoration: none; margin-left: auto; margin-right: auto; cursor: pointer; border-radius: 12px; background-color: #10b981; padding: 12px 24px; font-weight: 700; color: #ffffff; transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">See for yourself</a>
+        <p style="box-sizing: border-box; margin: 0; border-radius: 6px; background-color: #e5e7eb; padding: 16px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px;">{{errors}}</p>
+        <div role="separator" style="box-sizing: border-box; line-height: 16px;">&zwnj;</div>
+        <p style="box-sizing: border-box; margin: 0;">Bad news - we can't publish it at this time. <b style="box-sizing: border-box;">Good news</b> - we are already looking into it.</p>
+        <div role="separator" style="box-sizing: border-box; line-height: 48px;">&zwnj;</div>
+        <a href="{{url}}" class="hover-bg-red-600" target="_blank" style="box-sizing: border-box; text-decoration: none; margin-left: auto; margin-right: auto; cursor: pointer; border-radius: 12px; background-color: #ef4444; padding: 12px 24px; font-weight: 700; color: #ffffff; transition-property: background-color, border-color, color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">See for yourself</a>
         <div role="separator" style="box-sizing: border-box; line-height: 52px;">&zwnj;</div>
         <p style="box-sizing: border-box; margin: 0; font-size: 12px; color: #9ca3af;">If you believe this email was delivered by mistake, you can safely ignore it.</p>
         <div role="separator" style="box-sizing: border-box; line-height: 4px;">&zwnj;</div>

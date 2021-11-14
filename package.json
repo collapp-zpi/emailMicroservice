@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node build/index.js",
     "dev": "doppler run --command=\"npm run run\"",
+    "dev:debug": "doppler run --command=\"npm run run:debug\"",
     "run": "ts-node-dev src/index.ts",
+    "run:debug": "ts-node-dev src/debug.ts",
     "build": "rimraf ./build && tsc"
   },
   "repository": {
@@ -39,6 +41,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^6.0.1",
     "handlebars": "^4.7.7",
     "helmet": "^4.6.0",
     "nodemailer": "^6.6.5",

@@ -9,7 +9,7 @@ const server = express();
 server.use(helmet());
 server.use(cors());
 server.use(bodyParser.json());
-server.use(express.static("../views/images"));
+server.use(express.static("./views/images"));
 
 server.get("/", (req, res) => {
   res.send("OK");
