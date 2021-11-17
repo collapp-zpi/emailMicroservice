@@ -41,7 +41,10 @@ transporter.use(
 );
 
 const defaultOptions: MailOptions = {
-  from: process.env.EMAIL_USENAME,
+  from: {
+    name: "Collapp",
+    address: process.env.EMAIL_USENAME,
+  },
   to: "",
   subject: "",
   text: "",
